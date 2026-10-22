@@ -48,14 +48,14 @@
         <div class="mx-auto max-w-[1120px]">
             <header class="border-b border-line">
                 <div class="flex flex-wrap items-center justify-between gap-x-8 gap-y-3 py-5">
-                    <a href="index.html" class="font-mono text-sm text-muted no-underline hover:text-ink">andrewbeechey.me.uk</a>
+                    <a href="{{ route('home') }}" class="font-mono text-sm text-muted no-underline hover:text-ink">andrewbeechey.me.uk</a>
                     <nav class="flex flex-wrap gap-x-6 gap-y-1 font-mono text-sm" aria-label="Main">
-                        <a href="index.html" class="no-underline text-amber" aria-current="page">home</a>
-                        <a href="projects.html" class="no-underline text-muted hover:text-ink" >projects</a>
-                        <a href="experience.html" class="no-underline text-muted hover:text-ink" >experience</a>
-                        <a href="skills.html" class="no-underline text-muted hover:text-ink" >skills</a>
-                        <a href="education.html" class="no-underline text-muted hover:text-ink" >education</a>
-                        <a href="contact.html" class="no-underline text-muted hover:text-ink" >contact</a>
+                        <a href="{{ route('home') }}" class="no-underline text-amber" aria-current="page">home</a>
+                        <a href="{{ route('projects') }}" class="no-underline text-muted hover:text-ink" >projects</a>
+                        <a href="{{ route('experience') }}" class="no-underline text-muted hover:text-ink" >experience</a>
+                        <a href="{{ route('skills') }}" class="no-underline text-muted hover:text-ink" >skills</a>
+                        <a href="{{ route('education') }}" class="no-underline text-muted hover:text-ink" >education</a>
+                        <a href="{{ route('contact') }}" class="no-underline text-muted hover:text-ink" >contact</a>
                     </nav>
                 </div>
             </header>
