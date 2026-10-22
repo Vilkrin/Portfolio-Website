@@ -4,8 +4,19 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'home')->name('home');
 
-Route::middleware(['auth', 'verified'])->group(function () {
-    Route::view('dashboard', 'dashboard')->name('dashboard');
-});
+Route::view('projects', 'projects')->name('projects');
 
-require __DIR__ . '/settings.php';
+Route::view('contact', 'contact')->name('contact');
+
+Route::view('education', 'education')->name('education');
+
+Route::view('experience', 'experience')->name('experience');
+
+Route::view('skills', 'skills')->name('skills');
+
+
+// Route::middleware(['auth', 'verified'])->group(function () {
+//     Route::view('dashboard', 'dashboard')->name('dashboard');
+// });
+
+// require __DIR__ . '/settings.php';

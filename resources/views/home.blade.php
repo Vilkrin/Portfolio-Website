@@ -1,379 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Andrew Beechey — Portfolio & CV</title>
-
-    <meta
-        name="description"
-        content="Andrew Beechey's portfolio and CV website. Coming soon."
-    >
-
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <style>
-        body {
-            background:
-                radial-gradient(
-                    circle at 15% 20%,
-                    rgba(99, 102, 241, 0.12),
-                    transparent 30%
-                ),
-                radial-gradient(
-                    circle at 85% 80%,
-                    rgba(168, 85, 247, 0.10),
-                    transparent 30%
-                ),
-                #09090b;
-        }
-
-        .grid-background {
-            background-image:
-                linear-gradient(
-                    rgba(255, 255, 255, 0.035) 1px,
-                    transparent 1px
-                ),
-                linear-gradient(
-                    90deg,
-                    rgba(255, 255, 255, 0.035) 1px,
-                    transparent 1px
-                );
-            background-size: 50px 50px;
-        }
-
-        .glow {
-            box-shadow:
-                0 0 80px rgba(99, 102, 241, 0.12),
-                0 0 160px rgba(168, 85, 247, 0.06);
-        }
-
-        .pulse {
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 1;
+<!doctype html>
+<html lang="en-GB">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+        <title>Andrew Beechey</title>
+        <meta name="claude:viewport-fit-sides" content="cover">
+        <meta name="description" content="IT and web developer in London. 20 years of HTML, CSS and PHP, five with Laravel and Tailwind CSS.">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@400;500&family=Public+Sans:wght@400;500;600&display=swap">
+        <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            bg: '#0E1420',
+                            panel: '#141C2C',
+                            line: '#26324A',
+                            ink: '#E4E8F0',
+                            soft: '#C6CEDB',
+                            muted: '#9AA6B8',
+                            amber: '#F2B84B'
+                        },
+                        fontFamily: {
+                            mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
+                            display: ['Bricolage Grotesque', 'system-ui', 'sans-serif']
+                        }
+                    }
+                }
             }
-
-            50% {
-                opacity: 0.4;
-            }
-        }
-    </style>
+        </script>
+        <style>
+            /* Layout: code-editor identity. Deep navy ground, amber as the single accent, panels styled as editor windows, mono labels over a grotesque display face. Single dark look by choice. */
+            :root { color-scheme: dark }
+            body { background: #0E1420; color: #E4E8F0; font-family: 'Public Sans', system-ui, sans-serif; font-size: 16px; line-height: 1.6; margin: 0 }
+            .gutter { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)) }
+            .display { font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; letter-spacing: -0.02em; text-wrap: balance }
+            a:focus-visible,button:focus-visible{outline:2px solid #F2B84B;outline-offset:3px}
+.copy-btn.done{color:#F2B84B;border-color:#F2B84B}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style><style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
 </head>
-
-<body class="min-h-screen bg-zinc-950 text-white antialiased">
-
-    <!-- Background grid -->
-    <div class="grid-background fixed inset-0 pointer-events-none"></div>
-
-    <!-- Background glow -->
-    <div class="pointer-events-none fixed -left-32 top-20 h-72 w-72 rounded-full bg-indigo-500/10 blur-3xl"></div>
-    <div class="pointer-events-none fixed -right-32 bottom-20 h-72 w-72 rounded-full bg-purple-500/10 blur-3xl"></div>
-
-
-    <main class="relative flex min-h-screen flex-col">
-
-
-        <!-- ========================================================= -->
-        <!-- Header -->
-        <!-- ========================================================= -->
-
-        <header class="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6 lg:px-8">
-
-            <a
-                href="#"
-                class="text-lg font-semibold tracking-tight text-white"
-            >
-                Andrew
-                <span class="text-indigo-400">Beechey</span>
-            </a>
-
-            <div class="flex items-center gap-2 text-sm text-zinc-400">
-
-                <span class="h-2 w-2 rounded-full bg-emerald-400 pulse"></span>
-
-                <span>
-                    Currently building
-                </span>
-
-            </div>
-
-        </header>
-
-
-        <!-- ========================================================= -->
-        <!-- Main -->
-        <!-- ========================================================= -->
-
-        <section class="flex flex-1 items-center justify-center px-6 py-10 lg:px-8">
-
-            <div class="w-full max-w-4xl text-center">
-
-
-                <!-- Status badge -->
-
-                <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-zinc-300 backdrop-blur">
-
-                    <span class="h-2 w-2 rounded-full bg-indigo-400"></span>
-
-                    Portfolio coming soon
-
+<body>
+    
+    <div class="gutter">
+        <div class="mx-auto max-w-[1120px]">
+            <header class="border-b border-line">
+                <div class="flex flex-wrap items-center justify-between gap-x-8 gap-y-3 py-5">
+                    <a href="index.html" class="font-mono text-sm text-muted no-underline hover:text-ink">andrewbeechey.me.uk</a>
+                    <nav class="flex flex-wrap gap-x-6 gap-y-1 font-mono text-sm" aria-label="Main">
+                        <a href="index.html" class="no-underline text-amber" aria-current="page">home</a>
+                        <a href="projects.html" class="no-underline text-muted hover:text-ink" >projects</a>
+                        <a href="experience.html" class="no-underline text-muted hover:text-ink" >experience</a>
+                        <a href="skills.html" class="no-underline text-muted hover:text-ink" >skills</a>
+                        <a href="education.html" class="no-underline text-muted hover:text-ink" >education</a>
+                        <a href="contact.html" class="no-underline text-muted hover:text-ink" >contact</a>
+                    </nav>
                 </div>
-
-
-                <!-- Heading -->
-
-                <h1 class="mx-auto max-w-4xl text-5xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl">
-
-                    <span class="text-white">
-                        Building things.
-                    </span>
-
-                    <br>
-
-                    <span class="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                        Solving problems.
-                    </span>
-
-                </h1>
-
-
-                <!-- Introduction -->
-
-                <p class="mx-auto mt-6 max-w-2xl text-base leading-7 text-zinc-400 sm:text-lg">
-
-                    I'm currently putting together my portfolio and CV website,
-                    showcasing my work, projects, experience and the things I'm
-                    building along the way.
-
-                </p>
-
-
-                <!-- ================================================= -->
-                <!-- Development Progress -->
-                <!-- ================================================= -->
-
-                <div class="glow mx-auto mt-10 max-w-xl rounded-2xl border border-white/10 bg-zinc-900/70 p-5 text-left backdrop-blur">
-
-                    <div class="flex items-center justify-between">
-
-                        <div>
-
-                            <p class="text-sm font-medium text-white">
-                                Website development
-                            </p>
-
-                            <p class="mt-1 text-xs text-zinc-500">
-                                Currently under construction
-                            </p>
-
-                        </div>
-
-                        <span class="text-sm font-semibold text-indigo-400">
-                            75%
-                        </span>
-
-                    </div>
-
-
-                    <div class="mt-4 h-2 overflow-hidden rounded-full bg-white/5">
-
-                        <div
-                            class="h-full w-3/4 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500"
-                        ></div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- ================================================= -->
-                <!-- Feature Cards -->
-                <!-- ================================================= -->
-
-                <div class="mx-auto mt-8 grid max-w-2xl gap-4 text-left sm:grid-cols-3">
-
-
-                    <!-- Projects -->
-
-                    <div class="rounded-xl border border-white/10 bg-zinc-900/60 p-5 backdrop-blur">
-
-                        <div class="mb-3 text-indigo-400">
-
-                            <svg
-                                class="h-6 w-6"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="1.5"
-                                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                                />
-                            </svg>
-
-                        </div>
-
-                        <h3 class="font-medium text-white">
-                            Projects
-                        </h3>
-
-                        <p class="mt-2 text-sm leading-6 text-zinc-500">
-                            A selection of things I've built and worked on.
-                        </p>
-
-                    </div>
-
-
-                    <!-- Experience -->
-
-                    <div class="rounded-xl border border-white/10 bg-zinc-900/60 p-5 backdrop-blur">
-
-                        <div class="mb-3 text-purple-400">
-
-                            <svg
-                                class="h-6 w-6"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="1.5"
-                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                                />
-                            </svg>
-
-                        </div>
-
-                        <h3 class="font-medium text-white">
-                            Experience
-                        </h3>
-
-                        <p class="mt-2 text-sm leading-6 text-zinc-500">
-                            My professional background and experience.
-                        </p>
-
-                    </div>
-
-
-                    <!-- CV -->
-
-                    <div class="rounded-xl border border-white/10 bg-zinc-900/60 p-5 backdrop-blur">
-
-                        <div class="mb-3 text-pink-400">
-
-                            <svg
-                                class="h-6 w-6"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="1.5"
-                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h7l5 5v11a2 2 0 01-2 2z"
-                                />
-                            </svg>
-
-                        </div>
-
-                        <h3 class="font-medium text-white">
-                            CV
-                        </h3>
-
-                        <p class="mt-2 text-sm leading-6 text-zinc-500">
-                            Skills, education and professional history.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- ================================================= -->
-                <!-- Contact -->
-                <!-- ================================================= -->
-
-                <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
-
-
-<button
-    type="button"
-    onclick="copyEmail()"
-    class="rounded-lg border border-white/10 bg-white/[0.05] px-5 py-2.5 text-sm font-medium text-white transition hover:bg-white/10"
->
-    <span id="copyEmailText">Get in Touch</span>
-</button>
-
-
-                    <a
-                        href="https://github.com/Vilkrin/"
-                        class="rounded-lg border border-white/10 px-5 py-2.5 text-sm font-medium text-zinc-400 transition hover:border-white/20 hover:text-white"
-                    >
-                        GitHub
-                    </a>
-
-
-                    <a
-                        href="https://www.linkedin.com/in/abeechey/"
-                        class="rounded-lg border border-white/10 px-5 py-2.5 text-sm font-medium text-zinc-400 transition hover:border-white/20 hover:text-white"
-                    >
-                        LinkedIn
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ========================================================= -->
-        <!-- Footer -->
-        <!-- ========================================================= -->
-
-        <footer class="mx-auto w-full max-w-6xl px-6 py-6 lg:px-8">
-
-            <div class="flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-5 text-xs text-zinc-600 sm:flex-row">
-
-                <p>
-                    &copy; 2026 Andrew Beechey. All rights reserved.
-                </p>
-
-                <p>
-                    Portfolio &amp; CV
-                </p>
-
-            </div>
-
-        </footer>
-
-    </main>
-
-<script>
-    function copyEmail() {
-        const email = 'email@andrewbeechey.me.uk';
-
-        navigator.clipboard.writeText(email).then(() => {
-            const buttonText = document.getElementById('copyEmailText');
-
-            buttonText.textContent = 'Copied!';
-
-            setTimeout(() => {
-                buttonText.textContent = 'Copy Email';
-            }, 2000);
-        });
-    }
-</script>
-
-</body>
-</html>
+            </header>
+            <main class="flex flex-col gap-14 py-12">
+                <section class="flex flex-wrap gap-10 items-center">
+                    <div class="flex-[1_1_460px] min-w-0 flex flex-col gap-5">
+                        <p class="font-mono text-sm text-amber">// London, UK</p>
+                        <h1 class="display text-[clamp(44px,7vw,84px)] leading-none">Andrew Beechey</h1>
+                        <p class="display !font-semibold text-[clamp(22px,3vw,32px)] leading-tight text-soft">IT and web developer</p>
+                        <p class="max-w-lg text-muted">20 years of HTML, CSS and PHP. The last five spent building with Laravel and Tailwind CSS.</p>
+<div class="flex flex-wrap gap-3 mt-2"><a href="https://github.com/Vilkrin" class="bg-amber text-bg font-medium px-5 py-3 no-underline hover:bg-[#FFD98A]">GitHub</a><a href="https://uk.linkedin.com/in/abeechey" class="border border-amber text-amber font-medium px-5 py-3 no-underline hover:text-ink hover:border-ink">LinkedIn</a></div></div>
+<div class="flex-[1_1_300px] min-w-0 max-w-[420px] border border-line bg-panel"><div class="flex items-center gap-1.5 px-4 py-2.5 border-b border-line"><span class="w-2.5 h-2.5 rounded-full bg-[#3A4766]"></span><span class="w-2.5 h-2.5 rounded-full bg-[#3A4766]"></span><span class="w-2.5 h-2.5 rounded-full bg-[#3A4766]"></span><span class="ml-2.5 font-mono text-xs text-muted">photo.jpg</span></div>
+<div class="aspect-square flex items-center justify-center font-mono text-sm text-muted">[ PHOTO ]</div>
+</div>
+</section>
+
+<section class="border-t border-line pt-8 flex flex-wrap gap-x-12 gap-y-4"><h2 class="flex-[1_1_200px] font-mono font-medium text-sm text-amber">// about</h2><div class="flex-[3_1_460px] min-w-0 max-w-2xl flex flex-col gap-4 text-lg text-soft"><p>I'm an IT and web developer based in London. I have been writing HTML, CSS and PHP for 20 years, mostly on personal projects and websites for gaming clans I've been part of. For the last five years I've been learning and building with Laravel and Tailwind CSS.</p><p>On the IT side, I've set up IT suites and configured Proxmox servers running Windows Server, with Active Directory, group policies, DHCP and DNS. Before that I ran my own online business, setting up its Magento store for live trading.</p></div></section>
+
+<section class="flex flex-wrap gap-8">
+<div class="flex-[1_1_420px] min-w-0"><section class="border border-line bg-panel min-w-0 h-full"><div class="flex items-center gap-1.5 px-4 py-2.5 border-b border-line" aria-hidden="true"><span class="w-2.5 h-2.5 rounded-full bg-[#3A4766]"></span><span class="w-2.5 h-2.5 rounded-full bg-[#3A4766]"></span><span class="w-2.5 h-2.5 rounded-full bg-[#3A4766]"></span></div><div class="p-6"><h2 class="font-mono font-medium text-sm text-amber mb-4">stack.json</h2><div class="flex flex-col gap-3.5 font-mono text-sm"><div class="flex justify-between gap-3"><span>HTML, CSS, PHP</span><span class="text-muted">20 years</span></div><div class="h-1.5 bg-line"><div class="h-1.5 bg-amber w-full"></div></div><div class="flex justify-between gap-3"><span>Laravel, Tailwind CSS</span><span class="text-muted">5 years</span></div><div class="h-1.5 bg-line"><div class="h-1.5 bg-amber w-1/4"></div></div></div></div></section></div>
+<div class="flex-[1_1_420px] min-w-0"><section class="border border-line bg-panel min-w-0 h-full"><div class="flex items-center gap-1.5 px-4 py-2.5 border-b border-line" aria-hidden="true"><span class="w-2.5 h-2.5 rounded-full bg-[#3A4766]"></span><span class="w-2.5 h-2.5 rounded-full bg-[#3A4766]"></span><span class="w-2.5 h-2.5 rounded-full bg-[#3A4766]"></span></div><div class="p-6"><h2 class="font-mono font-medium text-sm text-amber mb-4">it-support.log</h2><p class="text-soft mb-3">Set up four IT suites for Waltham Forest Adult Learning Service. Configured Proxmox servers running Windows Server with Active Directory, group policies, DHCP and DNS.</p><a href="experience.html" class="font-mono text-sm text-amber no-underline hover:text-ink">view experience →</a></div></section></div></section>
+
+<section><div class="flex flex-wrap items-end justify-between gap-2 mb-6"><h2 class="display text-3xl">Projects</h2><a href="projects.html" class="font-mono text-sm text-amber no-underline hover:text-ink">all projects →</a></div>
+<div class="grid md:grid-cols-3 gap-4"><article class="border border-line bg-panel p-6 flex flex-col gap-3 min-w-0"><div class="flex flex-wrap items-center justify-between gap-2"><p class="font-mono text-xs text-muted min-w-0">Content management system</p><span class="shrink-0"><span class="inline-block font-mono text-xs px-2.5 py-1 border border-amber text-amber">In development</span></span></div><h3 class="display text-2xl">LaraCMS</h3><p class="text-soft">A content management system built with Laravel.</p><p class="font-mono text-xs text-muted mt-auto pt-2">Laravel · PHP · Tailwind CSS</p></article><article class="border border-line bg-panel p-6 flex flex-col gap-3 min-w-0"><div class="flex flex-wrap items-center justify-between gap-2"><p class="font-mono text-xs text-muted min-w-0">Image gallery</p><span class="shrink-0"><span class="inline-block font-mono text-xs px-2.5 py-1 border border-amber text-amber">In development</span></span></div><h3 class="display text-2xl">LumenGallery</h3><p class="text-soft">A gallery application built with Laravel.</p><p class="font-mono text-xs text-muted mt-auto pt-2">Laravel · PHP · Tailwind CSS</p></article><article class="border border-line bg-panel p-6 flex flex-col gap-3 min-w-0"><div class="flex flex-nowrap items-start justify-between gap-2"><p class="font-mono text-xs text-muted min-w-0">Gaming handle profile site</p><span class="shrink-0"><span class="inline-block font-mono text-xs px-2.5 py-1 border border-amber text-amber">In development</span></span></div><h3 class="display text-2xl">Vilkrin</h3><p class="text-soft">My personal profile website under my gaming handle.</p><p class="font-mono text-xs text-muted mt-auto pt-2">Web · Gaming</p></article></div></section>
+
+</main>
+<footer class="border-t border-line mt-4">
+    <div class="py-8 flex flex-wrap items-center justify-between gap-4 font-mono text-sm text-muted">
+        <span>© Andrew Beechey · London, UK</span><span class="flex gap-6"><a class="text-amber no-underline hover:text-ink" href="https://github.com/Vilkrin">github</a><a class="text-amber no-underline hover:text-ink" href="https://uk.linkedin.com/in/abeechey">linkedin</a></span>
+    </div>
+</footer>
+</div>
+</div>
+<script>document.querySelectorAll('[data-copy]').forEach(function(b){var l=b.textContent;b.addEventListener('click',function(){var t=b.getAttribute('data-copy');function ok(){b.textContent='Copied \u2713';b.classList.add('done');setTimeout(function(){b.textContent=l;b.classList.remove('done')},2000)}function fb(){try{var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();var r=document.execCommand('copy');document.body.removeChild(a);if(r)ok()}catch(e){}}try{navigator.clipboard.writeText(t).then(ok,fb)}catch(e){fb()}})});
+    </script>
+    </body>
+    </html>
