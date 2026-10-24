@@ -65,86 +65,178 @@
             <link rel="apple-touch-icon" href="{{ $seoSettings->getFirstMediaUrl('apple_touch_icon') }}">
         @endif --}}
 
-            <meta name="description" content="LaraCMS, LumenGallery and Vilkrin, plus earlier e-commerce and community web work.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@400;500&family=Public+Sans:wght@400;500;600&display=swap">
-    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-    <script>
-        tailwind.config={
-            theme:{extend:{colors:{bg:'#0E1420',panel:'#141C2C',line:'#26324A',ink:'#E4E8F0',soft:'#C6CEDB',muted:'#9AA6B8',amber:'#F2B84B'},fontFamily:{mono:['JetBrains Mono','ui-monospace','monospace'],display:['Bricolage Grotesque','system-ui','sans-serif']}}}}
-            </script>
-    <style>
-/* Layout: code-editor identity. Deep navy ground, amber as the single accent, panels styled as editor windows, mono labels over a grotesque display face. Single dark look by choice. */
-:root{color-scheme:dark}
-body{background:#0E1420;color:#E4E8F0;font-family:'Public Sans',system-ui,sans-serif;font-size:16px;line-height:1.6;margin:0}
-.gutter{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.display{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:800;letter-spacing:-0.02em;text-wrap:balance}
-a:focus-visible,button:focus-visible{outline:2px solid #F2B84B;outline-offset:3px}
-.copy-btn.done{color:#F2B84B;border-color:#F2B84B}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style><style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
-
-
         <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=inter:400,500,600&display=swap" rel="stylesheet" />
- 
-        <!-- Scripts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@400;500&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+        <!-- Styles and Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-        <!-- Styles -->        
         @livewireStyles
         @fluxAppearance
 
-</head>
-  <div class="gutter">
-    <div class="mx-auto max-w-[1120px]">
-      <header class="border-b border-line">
-        <div class="flex flex-wrap items-center justify-between gap-x-8 gap-y-3 py-5">
-                    <a href="{{ route('home') }}" class="font-mono text-sm text-muted no-underline hover:text-ink">andrewbeechey.me.uk</a>
-                    <nav class="flex flex-wrap gap-x-6 gap-y-1 font-mono text-sm" aria-label="Main">
-                        <a href="{{ route('home') }}" class="no-underline text-amber" aria-current="page">home</a>
-                        <a href="{{ route('projects') }}" class="no-underline text-muted hover:text-ink" >projects</a>
-                        <a href="{{ route('experience') }}" class="no-underline text-muted hover:text-ink" >experience</a>
-                        <a href="{{ route('skills') }}" class="no-underline text-muted hover:text-ink" >skills</a>
-                        <a href="{{ route('education') }}" class="no-underline text-muted hover:text-ink" >education</a>
-                        <a href="{{ route('contact') }}" class="no-underline text-muted hover:text-ink" >contact</a>
-                    </nav>
-        </div>
-      </header>
-        <main class="flex flex-col gap-14 py-12">
+        <style>
+            :root {
+                color-scheme: dark;
+                --portfolio-bg: #0E1420;
+                --portfolio-panel: #141C2C;
+                --portfolio-line: #26324A;
+                --portfolio-ink: #E4E8F0;
+                --portfolio-soft: #C6CEDB;
+                --portfolio-muted: #9AA6B8;
+                --portfolio-amber: #F2B84B;
+            }
 
-        {{ $slot }}
-        
-        </main>
-    
-        <!-- Footer -->
-        <footer class="border-t border-line mt-4">
+            body {
+                background: var(--portfolio-bg);
+                color: var(--portfolio-ink);
+                font-family: 'Public Sans', system-ui, sans-serif;
+                font-size: 16px;
+                line-height: 1.6;
+                margin: 0;
+            }
 
-            <div class="py-8 flex flex-wrap items-center justify-between gap-4 font-mono text-sm text-muted">
-                <span>© Andrew Beechey · London, UK</span>
-                <span class="flex gap-6"><a class="text-amber no-underline hover:text-ink" href="https://github.com/Vilkrin">github</a>
-                <a class="text-amber no-underline hover:text-ink" href="https://uk.linkedin.com/in/abeechey">linkedin</a>
-                </span>
+            .gutter {
+                padding-left: max(16px, env(safe-area-inset-left, 0px));
+                padding-right: max(16px, env(safe-area-inset-right, 0px));
+            }
+
+            .display {
+                font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+                font-weight: 800;
+                letter-spacing: -0.02em;
+                text-wrap: balance;
+            }
+
+            a:focus-visible,
+            button:focus-visible {
+                outline: 2px solid var(--portfolio-amber);
+                outline-offset: 3px;
+            }
+
+            .copy-btn.done {
+                color: var(--portfolio-amber);
+                border-color: var(--portfolio-amber);
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+                html {
+                    scroll-behavior: auto;
+                }
+            }
+
+            html {
+                padding-top: env(safe-area-inset-top, 0px);
+                padding-bottom: env(safe-area-inset-bottom, 0px);
+            }
+        </style>
+    </head>
+
+    <body class="min-h-full">
+        <div class="gutter">
+            <div class="mx-auto max-w-[1120px]">
+                <header class="border-b border-[#26324A]">
+                    <div class="flex flex-wrap items-center justify-between gap-x-8 gap-y-3 py-5">
+                        <a
+                            href="{{ route('home') }}"
+                            class="font-mono text-sm text-[#9AA6B8] no-underline hover:text-[#E4E8F0]"
+                        >
+                            andrewbeechey.me.uk
+                        </a>
+
+                        <nav class="flex flex-wrap gap-x-6 gap-y-1 font-mono text-sm" aria-label="Main">
+                            <a href="{{ route('home') }}" class="text-[#F2B84B] no-underline" aria-current="page">home</a>
+                            <a href="{{ route('projects') }}" class="text-[#9AA6B8] no-underline hover:text-[#E4E8F0]">projects</a>
+                            <a href="{{ route('experience') }}" class="text-[#9AA6B8] no-underline hover:text-[#E4E8F0]">experience</a>
+                            <a href="{{ route('skills') }}" class="text-[#9AA6B8] no-underline hover:text-[#E4E8F0]">skills</a>
+                            <a href="{{ route('education') }}" class="text-[#9AA6B8] no-underline hover:text-[#E4E8F0]">education</a>
+                            <a href="{{ route('contact') }}" class="text-[#9AA6B8] no-underline hover:text-[#E4E8F0]">contact</a>
+                        </nav>
+                    </div>
+                </header>
+
+                <main class="flex flex-col gap-14 py-12">
+                    {{ $slot }}
+                </main>
+
+                <footer class="mt-4 border-t border-[#26324A]">
+                    <div class="flex flex-wrap items-center justify-between gap-4 py-8 font-mono text-sm text-[#9AA6B8]">
+                        <span>© Andrew Beechey · London, UK</span>
+
+                        <span class="flex gap-6">
+                            <a
+                                class="text-[#F2B84B] no-underline hover:text-[#E4E8F0]"
+                                href="https://github.com/Vilkrin"
+                            >
+                                github
+                            </a>
+
+                            <a
+                                class="text-[#F2B84B] no-underline hover:text-[#E4E8F0]"
+                                href="https://uk.linkedin.com/in/abeechey"
+                            >
+                                linkedin
+                            </a>
+                        </span>
+                    </div>
+                </footer>
             </div>
-
-        </footer>
-        </div>
         </div>
 
-    <script>
-    document.querySelectorAll('[data-copy]').forEach(function(b){var l=b.textContent;b.addEventListener('click',function(){var t=b.getAttribute('data-copy');function ok(){b.textContent='Copied \u2713';b.classList.add('done');setTimeout(function(){b.textContent=l;b.classList.remove('done')},2000)}function fb(){try{var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();var r=document.execCommand('copy');document.body.removeChild(a);if(r)ok()}catch(e){}}try{navigator.clipboard.writeText(t).then(ok,fb)}catch(e){fb()}})});
-    
-    
-    </script>
+        <script>
+            document.querySelectorAll('[data-copy]').forEach(function (button) {
+                var originalText = button.textContent;
 
-     @livewireScripts
-     @fluxScripts
+                button.addEventListener('click', function () {
+                    var text = button.getAttribute('data-copy');
 
-     {{-- <livewire:cookie-consent /> --}}
-  
-  </body>
+                    function success() {
+                        button.textContent = 'Copied \u2713';
+                        button.classList.add('done');
 
+                        setTimeout(function () {
+                            button.textContent = originalText;
+                            button.classList.remove('done');
+                        }, 2000);
+                    }
 
-  </html>
+                    function fallback() {
+                        try {
+                            var textarea = document.createElement('textarea');
+
+                            textarea.value = text;
+                            textarea.setAttribute('readonly', '');
+                            textarea.style.position = 'fixed';
+                            textarea.style.opacity = '0';
+
+                            document.body.appendChild(textarea);
+                            textarea.select();
+
+                            var copied = document.execCommand('copy');
+
+                            document.body.removeChild(textarea);
+
+                            if (copied) {
+                                success();
+                            }
+                        } catch (error) {
+                            // Clipboard access is unavailable.
+                        }
+                    }
+
+                    try {
+                        navigator.clipboard.writeText(text).then(success, fallback);
+                    } catch (error) {
+                        fallback();
+                    }
+                });
+            });
+        </script>
+
+        @livewireScripts
+        @fluxScripts
+        
+    </body>
+
+</html>

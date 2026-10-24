@@ -8,7 +8,35 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* Re-assign Flux's gray of choice... */
+/*
+|--------------------------------------------------------------------------
+| Portfolio theme
+|--------------------------------------------------------------------------
+|
+| Custom colours and typography for the portfolio website.
+| These generate standard Tailwind utilities such as:
+| bg-portfolio, text-portfolio-muted, border-portfolio-line
+| font-display, font-mono and font-sans.
+|
+*/
+
+@theme {
+    --color-portfolio: #0e1420;
+    --color-portfolio-panel: #141c2c;
+    --color-portfolio-line: #26324a;
+    --color-portfolio-ink: #e4e8f0;
+    --color-portfolio-soft: #c6cedb;
+    --color-portfolio-muted: #9aa6b8;
+    --color-portfolio-amber: #f2b84b;
+    --color-portfolio-amber-hover: #ffd98a;
+    --color-portfolio-dot: #3a4766;
+
+    --font-sans: "Public Sans", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, monospace;
+    --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+}
+
+/* Re-assign Flux's gray of choice to slate. */
 @theme {
     --color-zinc-50: var(--color-slate-50);
     --color-zinc-100: var(--color-slate-100);
@@ -45,8 +73,56 @@
     ::file-selector-button {
         border-color: var(--color-gray-200, currentColor);
     }
+
+    html {
+        color-scheme: dark;
+        padding-top: env(safe-area-inset-top, 0px);
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+
+    body {
+        margin: 0;
+        background-color: var(--color-portfolio);
+        color: var(--color-portfolio-ink);
+        font-family: var(--font-sans);
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+        outline: 2px solid var(--color-portfolio-amber);
+        outline-offset: 3px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        html {
+            scroll-behavior: auto;
+        }
+    }
 }
 
+/* Portfolio-specific utilities. */
+@layer components {
+    .gutter {
+        padding-left: max(16px, env(safe-area-inset-left, 0px));
+        padding-right: max(16px, env(safe-area-inset-right, 0px));
+    }
+
+    .display {
+        font-family: var(--font-display);
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        text-wrap: balance;
+    }
+
+    .copy-btn.done {
+        color: var(--color-portfolio-amber);
+        border-color: var(--color-portfolio-amber);
+    }
+}
+
+/* Flux field styling. */
 [data-flux-field]:not(ui-radio, ui-checkbox) {
     @apply grid gap-2;
 }
@@ -60,7 +136,3 @@ textarea:focus[data-flux-control],
 select:focus[data-flux-control] {
     @apply outline-hidden ring-2 ring-accent ring-offset-2 ring-offset-accent-foreground;
 }
-
-/* \[:where(&)\]:size-4 {
-    @apply size-4;
-} */
