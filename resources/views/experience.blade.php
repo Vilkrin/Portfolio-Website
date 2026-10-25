@@ -1,28 +1,317 @@
-<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Experience | Andrew Beechey</title><meta name="claude:viewport-fit-sides" content="cover"><meta name="description" content="IT support, web development, e-commerce and customer service experience from 2009 to the present."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@400;500&family=Public+Sans:wght@400;500;600&display=swap"><script src="https://cdn.tailwindcss.com/3.4.17"></script><script>tailwind.config={theme:{extend:{colors:{bg:'#0E1420',panel:'#141C2C',line:'#26324A',ink:'#E4E8F0',soft:'#C6CEDB',muted:'#9AA6B8',amber:'#F2B84B'},fontFamily:{mono:['JetBrains Mono','ui-monospace','monospace'],display:['Bricolage Grotesque','system-ui','sans-serif']}}}}</script><style>
-/* Layout: code-editor identity. Deep navy ground, amber as the single accent, panels styled as editor windows, mono labels over a grotesque display face. Single dark look by choice. */
-:root{color-scheme:dark}
-body{background:#0E1420;color:#E4E8F0;font-family:'Public Sans',system-ui,sans-serif;font-size:16px;line-height:1.6;margin:0}
-.gutter{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.display{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:800;letter-spacing:-0.02em;text-wrap:balance}
-a:focus-visible,button:focus-visible{outline:2px solid #F2B84B;outline-offset:3px}
-.copy-btn.done{color:#F2B84B;border-color:#F2B84B}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style><style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
-</head>
-<body>
-  <div class="gutter">
-    <div class="mx-auto max-w-[1120px]">
-      <header class="border-b border-line">
-        <div class="flex flex-wrap items-center justify-between gap-x-8 gap-y-3 py-5">
-                    <a href="{{ route('home') }}" class="font-mono text-sm text-muted no-underline hover:text-ink">andrewbeechey.me.uk</a>
-                    <nav class="flex flex-wrap gap-x-6 gap-y-1 font-mono text-sm" aria-label="Main">
-                        <a href="{{ route('home') }}" class="no-underline text-amber" aria-current="page">home</a>
-                        <a href="{{ route('projects') }}" class="no-underline text-muted hover:text-ink" >projects</a>
-                        <a href="{{ route('experience') }}" class="no-underline text-muted hover:text-ink" >experience</a>
-                        <a href="{{ route('skills') }}" class="no-underline text-muted hover:text-ink" >skills</a>
-                        <a href="{{ route('education') }}" class="no-underline text-muted hover:text-ink" >education</a>
-                        <a href="{{ route('contact') }}" class="no-underline text-muted hover:text-ink" >contact</a>
-                    </nav>
-          </div>
-        </header>
-        <main class="flex flex-col gap-14 py-12"><div><p class="font-mono text-sm text-amber mb-3">// experience</p><h1 class="display text-4xl sm:text-6xl leading-none">Experience</h1><p class="text-muted max-w-xl mt-3">Web development and IT support first, then earlier roles back to 2009.</p></div><div><article class="grid md:grid-cols-[14rem_1fr] gap-x-8 gap-y-3 py-8 border-t border-line"><div class="min-w-0"><p class="font-mono text-sm text-muted">Ongoing</p><div class="mt-3 flex flex-wrap gap-2"><span class="inline-block font-mono text-xs px-2.5 py-1 border border-line text-muted">Web</span></div></div><div class="min-w-0"><h2 class="display text-2xl !font-semibold leading-snug">Independent web developer</h2><p class="text-amber mb-4">Personal and gaming clan projects</p><ul class="flex flex-col gap-2 max-w-2xl text-soft"><li class="pl-5 relative before:absolute before:left-0 before:top-[0.8em] before:w-2.5 before:h-px before:bg-amber">20 years of hands-on HTML, CSS and PHP, building personal sites and websites for gaming clans I have been part of.</li><li class="pl-5 relative before:absolute before:left-0 before:top-[0.8em] before:w-2.5 before:h-px before:bg-amber">The last five years learning and building with Laravel and Tailwind CSS.</li><li class="pl-5 relative before:absolute before:left-0 before:top-[0.8em] before:w-2.5 before:h-px before:bg-amber">Current projects in development: LaraCMS, LumenGallery and a profile site under my gaming handle, Vilkrin.</li></ul></div></article><article class="grid md:grid-cols-[14rem_1fr] gap-x-8 gap-y-3 py-8 border-t border-line"><div class="min-w-0"><p class="font-mono text-sm text-muted">May – Jun 2024</p><div class="mt-3 flex flex-wrap gap-2"><span class="inline-block font-mono text-xs px-2.5 py-1 border border-line text-muted">IT</span></div></div><div class="min-w-0"><h2 class="display text-2xl !font-semibold leading-snug">Junior System Support Technician</h2><p class="text-amber mb-4">Waltham Forest Adult Learning Service</p><ul class="flex flex-col gap-2 max-w-2xl text-soft"><li class="pl-5 relative before:absolute before:left-0 before:top-[0.8em] before:w-2.5 before:h-px before:bg-amber">Set up four IT suites and replaced old hardware: two suites with iMacs and two with Windows PCs.</li><li class="pl-5 relative before:absolute before:left-0 before:top-[0.8em] before:w-2.5 before:h-px before:bg-amber">Configured two Proxmox servers from scratch, each running Windows Server as a guest, and promoted them to domain controllers with Active Directory, users, group policies and permissions.</li><li class="pl-5 relative before:absolute before:left-0 before:top-[0.8em] before:w-2.5 before:h-px before:bg-amber">Deployed shared resources including shared drives and multiple printers.</li><li class="pl-5 relative before:absolute before:left-0 before:top-[0.8em] before:w-2.5 before:h-px before:bg-amber">Configured DHCP and DNS on the Windows server to take over from the ISP router.</li></ul></div></article><article class="grid md:grid-cols-[14rem_1fr] gap-x-8 gap-y-3 py-8 border-t border-line"><div class="min-w-0"><p class="font-mono text-sm text-muted">10 Jun 2015 – Sep 2016</p><div class="mt-3 flex flex-wrap gap-2"><span class="inline-block font-mono text-xs px-2.5 py-1 border border-line text-muted">E-commerce</span><span class="inline-block font-mono text-xs px-2.5 py-1 border border-line text-muted">Web</span></div></div><div class="min-w-0"><h2 class="display text-2xl !font-semibold leading-snug">Founder & Managing Director</h2><p class="text-amber mb-4">Waltham Games Ltd, London</p><ul class="flex flex-col gap-2 max-w-2xl text-soft"><li class="pl-5 relative before:absolute before:left-0 before:top-[0.8em] before:w-2.5 before:h-px before:bg-amber">Set up the Magento e-commerce store for live trading, and kept it running.</li><li class="pl-5 relative before:absolute before:left-0 before:top-[0.8em] before:w-2.5 before:h-px before:bg-amber">Listed stock on the company website, eBay and Amazon, then picked, packed and posted orders.</li><li class="pl-5 relative before:absolute before:left-0 before:top-[0.8em] before:w-2.5 before:h-px before:bg-amber">Ran payroll and accounts in Sage One, ordered stock and supplies, and set up supply chains to keep margins steady.</li><li class="pl-5 relative before:absolute before:left-0 before:top-[0.8em] before:w-2.5 before:h-px before:bg-amber">Set growth strategy and budgets for marketing, operations and technology.</li></ul></div></article><article class="grid md:grid-cols-[14rem_1fr] gap-x-8 gap-y-3 py-8 border-t border-line"><div class="min-w-0"><p class="font-mono text-sm text-muted">Sep 2014 – Sep 2015 · Mar 2017 – Mar 2020</p><div class="mt-3 flex flex-wrap gap-2"><span class="inline-block font-mono text-xs px-2.5 py-1 border border-line text-muted">Retail</span></div></div><div class="min-w-0"><h2 class="display text-2xl !font-semibold leading-snug">Sales Assistant / Cashier (Volunteer)</h2><p class="text-amber mb-4">Crest Charity Shop, Walthamstow</p><ul class="flex flex-col gap-2 max-w-2xl text-soft"><li class="pl-5 relative before:absolute before:left-0 before:top-[0.8em] before:w-2.5 before:h-px before:bg-amber">Sorted donations, put new stock out on the shop floor and kept the shop tidy and presentable.</li><li class="pl-5 relative before:absolute before:left-0 before:top-[0.8em] before:w-2.5 before:h-px before:bg-amber">Took cash payments, issued receipts, refunds and change, and counted the till at the start of each shift.</li><li class="pl-5 relative before:absolute before:left-0 before:top-[0.8em] before:w-2.5 before:h-px before:bg-amber">Greeted customers, checked prices, and opened and closed the shop.</li></ul></div></article><article class="grid md:grid-cols-[14rem_1fr] gap-x-8 gap-y-3 py-8 border-t border-line"><div class="min-w-0"><p class="font-mono text-sm text-muted">Nov – Dec 2016</p><div class="mt-3 flex flex-wrap gap-2"><span class="inline-block font-mono text-xs px-2.5 py-1 border border-line text-muted">Warehouse</span></div></div><div class="min-w-0"><h2 class="display text-2xl !font-semibold leading-snug">Warehouse Operative (temporary roles)</h2><p class="text-amber mb-4">APG Recruitment Ltd</p><ul class="flex flex-col gap-2 max-w-2xl text-soft"><li class="pl-5 relative before:absolute before:left-0 before:top-[0.8em] before:w-2.5 before:h-px before:bg-amber">Picked and packed orders, unloaded containers onto pallets, and loaded vans for delivery.</li></ul></div></article><article class="grid md:grid-cols-[14rem_1fr] gap-x-8 gap-y-3 py-8 border-t border-line"><div class="min-w-0"><p class="font-mono text-sm text-muted">Sep – Oct 2016</p><div class="mt-3 flex flex-wrap gap-2"><span class="inline-block font-mono text-xs px-2.5 py-1 border border-line text-muted">Warehouse</span></div></div><div class="min-w-0"><h2 class="display text-2xl !font-semibold leading-snug">Warehouse Operative</h2><p class="text-amber mb-4">Sainsbury's, Waltham Abbey</p><ul class="flex flex-col gap-2 max-w-2xl text-soft"><li class="pl-5 relative before:absolute before:left-0 before:top-[0.8em] before:w-2.5 before:h-px before:bg-amber">Packed goods onto roll cages from the conveyor and closed them ready for loading onto lorries.</li></ul></div></article><article class="grid md:grid-cols-[14rem_1fr] gap-x-8 gap-y-3 py-8 border-t border-line"><div class="min-w-0"><p class="font-mono text-sm text-muted">Mar 2010 – May 2011</p><div class="mt-3 flex flex-wrap gap-2"><span class="inline-block font-mono text-xs px-2.5 py-1 border border-line text-muted">Support</span></div></div><div class="min-w-0"><h2 class="display text-2xl !font-semibold leading-snug">Operations Support Executive</h2><p class="text-amber mb-4">TalkTalk, North Acton, London</p><ul class="flex flex-col gap-2 max-w-2xl text-soft"><li class="pl-5 relative before:absolute before:left-0 before:top-[0.8em] before:w-2.5 before:h-px before:bg-amber">Handled high-level escalations from first-line contact centre advisors, working with Opal (SMC) and BT.</li><li class="pl-5 relative before:absolute before:left-0 before:top-[0.8em] before:w-2.5 before:h-px before:bg-amber">Recommended ways to improve efficiency and planned processes around technical problems.</li><li class="pl-5 relative before:absolute before:left-0 before:top-[0.8em] before:w-2.5 before:h-px before:bg-amber">Worked with senior managers and advisors from non-technical backgrounds, raising and updating tickets in Remedy.</li></ul></div></article><article class="grid md:grid-cols-[14rem_1fr] gap-x-8 gap-y-3 py-8 border-t border-line"><div class="min-w-0"><p class="font-mono text-sm text-muted">Nov 2009 – Jan 2010</p><div class="mt-3 flex flex-wrap gap-2"><span class="inline-block font-mono text-xs px-2.5 py-1 border border-line text-muted">Support</span></div></div><div class="min-w-0"><h2 class="display text-2xl !font-semibold leading-snug">Customer Service Agent</h2><p class="text-amber mb-4">Lebara, Tower Hill, London</p><ul class="flex flex-col gap-2 max-w-2xl text-soft"><li class="pl-5 relative before:absolute before:left-0 before:top-[0.8em] before:w-2.5 before:h-px before:bg-amber">Entered customer registrations and answered inbound calls and emails with accurate product and service information.</li><li class="pl-5 relative before:absolute before:left-0 before:top-[0.8em] before:w-2.5 before:h-px before:bg-amber">Made outbound after-sales calls, investigated customer problems and gave fast resolutions.</li><li class="pl-5 relative before:absolute before:left-0 before:top-[0.8em] before:w-2.5 before:h-px before:bg-amber">Raised tickets to track customer issues and resolved them over the phone.</li></ul></div></article></div></main><footer class="border-t border-line mt-4"><div class="py-8 flex flex-wrap items-center justify-between gap-4 font-mono text-sm text-muted"><span>© Andrew Beechey · London, UK</span><span class="flex gap-6"><a class="text-amber no-underline hover:text-ink" href="https://github.com/Vilkrin">github</a><a class="text-amber no-underline hover:text-ink" href="https://uk.linkedin.com/in/abeechey">linkedin</a></span></div></footer></div></div><script>document.querySelectorAll('[data-copy]').forEach(function(b){var l=b.textContent;b.addEventListener('click',function(){var t=b.getAttribute('data-copy');function ok(){b.textContent='Copied \u2713';b.classList.add('done');setTimeout(function(){b.textContent=l;b.classList.remove('done')},2000)}function fb(){try{var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();var r=document.execCommand('copy');document.body.removeChild(a);if(r)ok()}catch(e){}}try{navigator.clipboard.writeText(t).then(ok,fb)}catch(e){fb()}})});</script></body></html>
+<x-layouts::main :title="__('Experience')">
+    <section>
+        <p class="mb-3 font-mono text-sm text-portfolio-amber">
+            // experience
+        </p>
+
+        <h1 class="display text-4xl leading-none sm:text-6xl">
+            Experience
+        </h1>
+
+        <p class="mt-3 max-w-xl text-portfolio-muted">
+            Web development and IT support first, then earlier roles back to 2009.
+        </p>
+    </section>
+
+    <section>
+        <article class="grid gap-x-8 gap-y-3 border-t border-portfolio-line py-8 md:grid-cols-[14rem_1fr]">
+            <div class="min-w-0">
+                <p class="font-mono text-sm text-portfolio-muted">
+                    Ongoing
+                </p>
+
+                <div class="mt-3 flex flex-wrap gap-2">
+                    <span class="inline-block border border-portfolio-line px-2.5 py-1 font-mono text-xs text-portfolio-muted">
+                        Web
+                    </span>
+                </div>
+            </div>
+
+            <div class="min-w-0">
+                <h2 class="display text-2xl !font-semibold leading-snug">
+                    Independent web developer
+                </h2>
+
+                <p class="mb-4 text-portfolio-amber">
+                    Personal and gaming clan projects
+                </p>
+
+                <ul class="flex max-w-2xl flex-col gap-2 text-portfolio-soft">
+                    <li class="relative pl-5 before:absolute before:left-0 before:top-[0.8em] before:h-px before:w-2.5 before:bg-portfolio-amber">
+                        20 years of hands-on HTML, CSS and PHP, building personal sites and websites for gaming clans I have been part of.
+                    </li>
+
+                    <li class="relative pl-5 before:absolute before:left-0 before:top-[0.8em] before:h-px before:w-2.5 before:bg-portfolio-amber">
+                        The last five years learning and building with Laravel and Tailwind CSS.
+                    </li>
+
+                    <li class="relative pl-5 before:absolute before:left-0 before:top-[0.8em] before:h-px before:w-2.5 before:bg-portfolio-amber">
+                        Current projects in development: LaraCMS, LumenGallery and a profile site under my gaming handle, Vilkrin.
+                    </li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="grid gap-x-8 gap-y-3 border-t border-portfolio-line py-8 md:grid-cols-[14rem_1fr]">
+            <div class="min-w-0">
+                <p class="font-mono text-sm text-portfolio-muted">
+                    May – Jun 2024
+                </p>
+
+                <div class="mt-3 flex flex-wrap gap-2">
+                    <span class="inline-block border border-portfolio-line px-2.5 py-1 font-mono text-xs text-portfolio-muted">
+                        IT
+                    </span>
+                </div>
+            </div>
+
+            <div class="min-w-0">
+                <h2 class="display text-2xl !font-semibold leading-snug">
+                    Junior System Support Technician
+                </h2>
+
+                <p class="mb-4 text-portfolio-amber">
+                    Waltham Forest Adult Learning Service
+                </p>
+
+                <ul class="flex max-w-2xl flex-col gap-2 text-portfolio-soft">
+                    <li class="relative pl-5 before:absolute before:left-0 before:top-[0.8em] before:h-px before:w-2.5 before:bg-portfolio-amber">
+                        Set up four IT suites and replaced old hardware: two suites with iMacs and two with Windows PCs.
+                    </li>
+
+                    <li class="relative pl-5 before:absolute before:left-0 before:top-[0.8em] before:h-px before:w-2.5 before:bg-portfolio-amber">
+                        Configured two Proxmox servers from scratch, each running Windows Server as a guest, and promoted them to domain controllers with Active Directory, users, group policies and permissions.
+                    </li>
+
+                    <li class="relative pl-5 before:absolute before:left-0 before:top-[0.8em] before:h-px before:w-2.5 before:bg-portfolio-amber">
+                        Deployed shared resources including shared drives and multiple printers.
+                    </li>
+
+                    <li class="relative pl-5 before:absolute before:left-0 before:top-[0.8em] before:h-px before:w-2.5 before:bg-portfolio-amber">
+                        Configured DHCP and DNS on the Windows server to take over from the ISP router.
+                    </li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="grid gap-x-8 gap-y-3 border-t border-portfolio-line py-8 md:grid-cols-[14rem_1fr]">
+            <div class="min-w-0">
+                <p class="font-mono text-sm text-portfolio-muted">
+                    10 Jun 2015 – Sep 2016
+                </p>
+
+                <div class="mt-3 flex flex-wrap gap-2">
+                    <span class="inline-block border border-portfolio-line px-2.5 py-1 font-mono text-xs text-portfolio-muted">
+                        E-commerce
+                    </span>
+
+                    <span class="inline-block border border-portfolio-line px-2.5 py-1 font-mono text-xs text-portfolio-muted">
+                        Web
+                    </span>
+                </div>
+            </div>
+
+            <div class="min-w-0">
+                <h2 class="display text-2xl !font-semibold leading-snug">
+                    Founder & Managing Director
+                </h2>
+
+                <p class="mb-4 text-portfolio-amber">
+                    Waltham Games Ltd, London
+                </p>
+
+                <ul class="flex max-w-2xl flex-col gap-2 text-portfolio-soft">
+                    <li class="relative pl-5 before:absolute before:left-0 before:top-[0.8em] before:h-px before:w-2.5 before:bg-portfolio-amber">
+                        Set up the Magento e-commerce store for live trading, and kept it running.
+                    </li>
+
+                    <li class="relative pl-5 before:absolute before:left-0 before:top-[0.8em] before:h-px before:w-2.5 before:bg-portfolio-amber">
+                        Listed stock on the company website, eBay and Amazon, then picked, packed and posted orders.
+                    </li>
+
+                    <li class="relative pl-5 before:absolute before:left-0 before:top-[0.8em] before:h-px before:w-2.5 before:bg-portfolio-amber">
+                        Ran payroll and accounts in Sage One, ordered stock and supplies, and set up supply chains to keep margins steady.
+                    </li>
+
+                    <li class="relative pl-5 before:absolute before:left-0 before:top-[0.8em] before:h-px before:w-2.5 before:bg-portfolio-amber">
+                        Set growth strategy and budgets for marketing, operations and technology.
+                    </li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="grid gap-x-8 gap-y-3 border-t border-portfolio-line py-8 md:grid-cols-[14rem_1fr]">
+            <div class="min-w-0">
+                <p class="font-mono text-sm text-portfolio-muted">
+                    Sep 2014 – Sep 2015 · Mar 2017 – Mar 2020
+                </p>
+
+                <div class="mt-3 flex flex-wrap gap-2">
+                    <span class="inline-block border border-portfolio-line px-2.5 py-1 font-mono text-xs text-portfolio-muted">
+                        Retail
+                    </span>
+                </div>
+            </div>
+
+            <div class="min-w-0">
+                <h2 class="display text-2xl !font-semibold leading-snug">
+                    Sales Assistant / Cashier (Volunteer)
+                </h2>
+
+                <p class="mb-4 text-portfolio-amber">
+                    Crest Charity Shop, Walthamstow
+                </p>
+
+                <ul class="flex max-w-2xl flex-col gap-2 text-portfolio-soft">
+                    <li class="relative pl-5 before:absolute before:left-0 before:top-[0.8em] before:h-px before:w-2.5 before:bg-portfolio-amber">
+                        Sorted donations, put new stock out on the shop floor and kept the shop tidy and presentable.
+                    </li>
+
+                    <li class="relative pl-5 before:absolute before:left-0 before:top-[0.8em] before:h-px before:w-2.5 before:bg-portfolio-amber">
+                        Took cash payments, issued receipts, refunds and change, and counted the till at the start of each shift.
+                    </li>
+
+                    <li class="relative pl-5 before:absolute before:left-0 before:top-[0.8em] before:h-px before:w-2.5 before:bg-portfolio-amber">
+                        Greeted customers, checked prices, and opened and closed the shop.
+                    </li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="grid gap-x-8 gap-y-3 border-t border-portfolio-line py-8 md:grid-cols-[14rem_1fr]">
+            <div class="min-w-0">
+                <p class="font-mono text-sm text-portfolio-muted">
+                    Nov – Dec 2016
+                </p>
+
+                <div class="mt-3 flex flex-wrap gap-2">
+                    <span class="inline-block border border-portfolio-line px-2.5 py-1 font-mono text-xs text-portfolio-muted">
+                        Warehouse
+                    </span>
+                </div>
+            </div>
+
+            <div class="min-w-0">
+                <h2 class="display text-2xl !font-semibold leading-snug">
+                    Warehouse Operative (temporary roles)
+                </h2>
+
+                <p class="mb-4 text-portfolio-amber">
+                    APG Recruitment Ltd
+                </p>
+
+                <ul class="flex max-w-2xl flex-col gap-2 text-portfolio-soft">
+                    <li class="relative pl-5 before:absolute before:left-0 before:top-[0.8em] before:h-px before:w-2.5 before:bg-portfolio-amber">
+                        Picked and packed orders, unloaded containers onto pallets, and loaded vans for delivery.
+                    </li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="grid gap-x-8 gap-y-3 border-t border-portfolio-line py-8 md:grid-cols-[14rem_1fr]">
+            <div class="min-w-0">
+                <p class="font-mono text-sm text-portfolio-muted">
+                    Sep – Oct 2016
+                </p>
+
+                <div class="mt-3 flex flex-wrap gap-2">
+                    <span class="inline-block border border-portfolio-line px-2.5 py-1 font-mono text-xs text-portfolio-muted">
+                        Warehouse
+                    </span>
+                </div>
+            </div>
+
+            <div class="min-w-0">
+                <h2 class="display text-2xl !font-semibold leading-snug">
+                    Warehouse Operative
+                </h2>
+
+                <p class="mb-4 text-portfolio-amber">
+                    Sainsbury's, Waltham Abbey
+                </p>
+
+                <ul class="flex max-w-2xl flex-col gap-2 text-portfolio-soft">
+                    <li class="relative pl-5 before:absolute before:left-0 before:top-[0.8em] before:h-px before:w-2.5 before:bg-portfolio-amber">
+                        Packed goods onto roll cages from the conveyor and closed them ready for loading onto lorries.
+                    </li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="grid gap-x-8 gap-y-3 border-t border-portfolio-line py-8 md:grid-cols-[14rem_1fr]">
+            <div class="min-w-0">
+                <p class="font-mono text-sm text-portfolio-muted">
+                    Mar 2010 – May 2011
+                </p>
+
+                <div class="mt-3 flex flex-wrap gap-2">
+                    <span class="inline-block border border-portfolio-line px-2.5 py-1 font-mono text-xs text-portfolio-muted">
+                        Support
+                    </span>
+                </div>
+            </div>
+
+            <div class="min-w-0">
+                <h2 class="display text-2xl !font-semibold leading-snug">
+                    Operations Support Executive
+                </h2>
+
+                <p class="mb-4 text-portfolio-amber">
+                    TalkTalk, North Acton, London
+                </p>
+
+                <ul class="flex max-w-2xl flex-col gap-2 text-portfolio-soft">
+                    <li class="relative pl-5 before:absolute before:left-0 before:top-[0.8em] before:h-px before:w-2.5 before:bg-portfolio-amber">
+                        Handled high-level escalations from first-line contact centre advisors, working with Opal (SMC) and BT.
+                    </li>
+
+                    <li class="relative pl-5 before:absolute before:left-0 before:top-[0.8em] before:h-px before:w-2.5 before:bg-portfolio-amber">
+                        Recommended ways to improve efficiency and planned processes around technical problems.
+                    </li>
+
+                    <li class="relative pl-5 before:absolute before:left-0 before:top-[0.8em] before:h-px before:w-2.5 before:bg-portfolio-amber">
+                        Worked with senior managers and advisors from non-technical backgrounds, raising and updating tickets in Remedy.
+                    </li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="grid gap-x-8 gap-y-3 border-t border-portfolio-line py-8 md:grid-cols-[14rem_1fr]">
+            <div class="min-w-0">
+                <p class="font-mono text-sm text-portfolio-muted">
+                    Nov 2009 – Jan 2010
+                </p>
+
+                <div class="mt-3 flex flex-wrap gap-2">
+                    <span class="inline-block border border-portfolio-line px-2.5 py-1 font-mono text-xs text-portfolio-muted">
+                        Support
+                    </span>
+                </div>
+            </div>
+
+            <div class="min-w-0">
+                <h2 class="display text-2xl !font-semibold leading-snug">
+                    Customer Service Agent
+                </h2>
+
+                <p class="mb-4 text-portfolio-amber">
+                    Lebara, Tower Hill, London
+                </p>
+
+                <ul class="flex max-w-2xl flex-col gap-2 text-portfolio-soft">
+                    <li class="relative pl-5 before:absolute before:left-0 before:top-[0.8em] before:h-px before:w-2.5 before:bg-portfolio-amber">
+                        Entered customer registrations and answered inbound calls and emails with accurate product and service information.
+                    </li>
+
+                    <li class="relative pl-5 before:absolute before:left-0 before:top-[0.8em] before:h-px before:w-2.5 before:bg-portfolio-amber">
+                        Made outbound after-sales calls, investigated customer problems and gave fast resolutions.
+                    </li>
+
+                    <li class="relative pl-5 before:absolute before:left-0 before:top-[0.8em] before:h-px before:w-2.5 before:bg-portfolio-amber">
+                        Raised tickets to track customer issues and resolved them over the phone.
+                    </li>
+                </ul>
+            </div>
+        </article>
+    </section>
+</x-layouts::main>

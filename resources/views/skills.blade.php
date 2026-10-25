@@ -1,28 +1,138 @@
-<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Skills | Andrew Beechey</title><meta name="claude:viewport-fit-sides" content="cover"><meta name="description" content="Web development, IT systems support and business operations skills."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@400;500&family=Public+Sans:wght@400;500;600&display=swap"><script src="https://cdn.tailwindcss.com/3.4.17"></script><script>tailwind.config={theme:{extend:{colors:{bg:'#0E1420',panel:'#141C2C',line:'#26324A',ink:'#E4E8F0',soft:'#C6CEDB',muted:'#9AA6B8',amber:'#F2B84B'},fontFamily:{mono:['JetBrains Mono','ui-monospace','monospace'],display:['Bricolage Grotesque','system-ui','sans-serif']}}}}</script><style>
-/* Layout: code-editor identity. Deep navy ground, amber as the single accent, panels styled as editor windows, mono labels over a grotesque display face. Single dark look by choice. */
-:root{color-scheme:dark}
-body{background:#0E1420;color:#E4E8F0;font-family:'Public Sans',system-ui,sans-serif;font-size:16px;line-height:1.6;margin:0}
-.gutter{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.display{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:800;letter-spacing:-0.02em;text-wrap:balance}
-a:focus-visible,button:focus-visible{outline:2px solid #F2B84B;outline-offset:3px}
-.copy-btn.done{color:#F2B84B;border-color:#F2B84B}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style><style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
-</head>
-<body>
-  <div class="gutter">
-    <div class="mx-auto max-w-[1120px]">
-      <header class="border-b border-line">
-        <div class="flex flex-wrap items-center justify-between gap-x-8 gap-y-3 py-5">
-                    <a href="{{ route('home') }}" class="font-mono text-sm text-muted no-underline hover:text-ink">andrewbeechey.me.uk</a>
-                    <nav class="flex flex-wrap gap-x-6 gap-y-1 font-mono text-sm" aria-label="Main">
-                        <a href="{{ route('home') }}" class="no-underline text-amber" aria-current="page">home</a>
-                        <a href="{{ route('projects') }}" class="no-underline text-muted hover:text-ink" >projects</a>
-                        <a href="{{ route('experience') }}" class="no-underline text-muted hover:text-ink" >experience</a>
-                        <a href="{{ route('skills') }}" class="no-underline text-muted hover:text-ink" >skills</a>
-                        <a href="{{ route('education') }}" class="no-underline text-muted hover:text-ink" >education</a>
-                        <a href="{{ route('contact') }}" class="no-underline text-muted hover:text-ink" >contact</a>
-                    </nav>
-        </div>
-      </header>
-      <main class="flex flex-col gap-14 py-12"><div><p class="font-mono text-sm text-amber mb-3">// skills</p><h1 class="display text-4xl sm:text-6xl leading-none">Skills</h1><p class="text-muted max-w-xl mt-3">What I build with, what I support, and what I have run.</p></div><div class="grid md:grid-cols-3 gap-4"><section class="border border-line bg-panel min-w-0 "><div class="flex items-center gap-1.5 px-4 py-2.5 border-b border-line" aria-hidden="true"><span class="w-2.5 h-2.5 rounded-full bg-[#3A4766]"></span><span class="w-2.5 h-2.5 rounded-full bg-[#3A4766]"></span><span class="w-2.5 h-2.5 rounded-full bg-[#3A4766]"></span></div><div class="p-6"><h2 class="font-mono font-medium text-sm text-amber mb-4">web.dev</h2><ul class="flex flex-col gap-2 text-soft"><li class="border-t border-line pt-2">HTML, CSS and PHP (20 years)</li><li class="border-t border-line pt-2">Laravel and Tailwind CSS (5 years)</li><li class="border-t border-line pt-2">Magento store set-up</li><li class="border-t border-line pt-2">Responsive, hand-built front ends</li></ul></div></section><section class="border border-line bg-panel min-w-0 "><div class="flex items-center gap-1.5 px-4 py-2.5 border-b border-line" aria-hidden="true"><span class="w-2.5 h-2.5 rounded-full bg-[#3A4766]"></span><span class="w-2.5 h-2.5 rounded-full bg-[#3A4766]"></span><span class="w-2.5 h-2.5 rounded-full bg-[#3A4766]"></span></div><div class="p-6"><h2 class="font-mono font-medium text-sm text-amber mb-4">it-support.sys</h2><ul class="flex flex-col gap-2 text-soft"><li class="border-t border-line pt-2">Proxmox virtualisation</li><li class="border-t border-line pt-2">Windows Server</li><li class="border-t border-line pt-2">Active Directory and Group Policy</li><li class="border-t border-line pt-2">DHCP and DNS</li><li class="border-t border-line pt-2">iMac and Windows PC set-up</li><li class="border-t border-line pt-2">Remedy ticketing</li></ul></div></section><section class="border border-line bg-panel min-w-0 "><div class="flex items-center gap-1.5 px-4 py-2.5 border-b border-line" aria-hidden="true"><span class="w-2.5 h-2.5 rounded-full bg-[#3A4766]"></span><span class="w-2.5 h-2.5 rounded-full bg-[#3A4766]"></span><span class="w-2.5 h-2.5 rounded-full bg-[#3A4766]"></span></div><div class="p-6"><h2 class="font-mono font-medium text-sm text-amber mb-4">business.ops</h2><ul class="flex flex-col gap-2 text-soft"><li class="border-t border-line pt-2">Sage One accounts and payroll</li><li class="border-t border-line pt-2">eBay and Amazon selling</li><li class="border-t border-line pt-2">Microsoft Excel, Access and Office</li><li class="border-t border-line pt-2">Customer service and escalations</li><li class="border-t border-line pt-2">Stock handling and order fulfilment</li><li class="border-t border-line pt-2">Budget estimation</li></ul></div></section></div></main><footer class="border-t border-line mt-4"><div class="py-8 flex flex-wrap items-center justify-between gap-4 font-mono text-sm text-muted"><span>© Andrew Beechey · London, UK</span><span class="flex gap-6"><a class="text-amber no-underline hover:text-ink" href="https://github.com/Vilkrin">github</a><a class="text-amber no-underline hover:text-ink" href="https://uk.linkedin.com/in/abeechey">linkedin</a></span></div></footer></div></div><script>document.querySelectorAll('[data-copy]').forEach(function(b){var l=b.textContent;b.addEventListener('click',function(){var t=b.getAttribute('data-copy');function ok(){b.textContent='Copied \u2713';b.classList.add('done');setTimeout(function(){b.textContent=l;b.classList.remove('done')},2000)}function fb(){try{var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();var r=document.execCommand('copy');document.body.removeChild(a);if(r)ok()}catch(e){}}try{navigator.clipboard.writeText(t).then(ok,fb)}catch(e){fb()}})});</script></body></html>
+<x-layouts::main :title="__('Skills')">
+    <section>
+        <p class="mb-3 font-mono text-sm text-portfolio-amber">
+            // skills
+        </p>
+
+        <h1 class="display text-4xl leading-none sm:text-6xl">
+            Skills
+        </h1>
+
+        <p class="mt-3 max-w-xl text-portfolio-muted">
+            What I build with, what I support, and what I have run.
+        </p>
+    </section>
+
+    <section class="grid gap-4 md:grid-cols-3">
+        <article class="min-w-0 border border-portfolio-line bg-portfolio-panel">
+            <div
+                class="flex items-center gap-1.5 border-b border-portfolio-line px-4 py-2.5"
+                aria-hidden="true"
+            >
+                <span class="size-2.5 rounded-full bg-portfolio-dot"></span>
+                <span class="size-2.5 rounded-full bg-portfolio-dot"></span>
+                <span class="size-2.5 rounded-full bg-portfolio-dot"></span>
+            </div>
+
+            <div class="p-6">
+                <h2 class="mb-4 font-mono text-sm font-medium text-portfolio-amber">
+                    web.dev
+                </h2>
+
+                <ul class="flex flex-col gap-2 text-portfolio-soft">
+                    <li class="border-t border-portfolio-line pt-2">
+                        HTML, CSS and PHP (20 years)
+                    </li>
+
+                    <li class="border-t border-portfolio-line pt-2">
+                        Laravel and Tailwind CSS (5 years)
+                    </li>
+
+                    <li class="border-t border-portfolio-line pt-2">
+                        Magento store set-up
+                    </li>
+
+                    <li class="border-t border-portfolio-line pt-2">
+                        Responsive, hand-built front ends
+                    </li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="min-w-0 border border-portfolio-line bg-portfolio-panel">
+            <div
+                class="flex items-center gap-1.5 border-b border-portfolio-line px-4 py-2.5"
+                aria-hidden="true"
+            >
+                <span class="size-2.5 rounded-full bg-portfolio-dot"></span>
+                <span class="size-2.5 rounded-full bg-portfolio-dot"></span>
+                <span class="size-2.5 rounded-full bg-portfolio-dot"></span>
+            </div>
+
+            <div class="p-6">
+                <h2 class="mb-4 font-mono text-sm font-medium text-portfolio-amber">
+                    it-support.sys
+                </h2>
+
+                <ul class="flex flex-col gap-2 text-portfolio-soft">
+                    <li class="border-t border-portfolio-line pt-2">
+                        Proxmox virtualisation
+                    </li>
+
+                    <li class="border-t border-portfolio-line pt-2">
+                        Windows Server
+                    </li>
+
+                    <li class="border-t border-portfolio-line pt-2">
+                        Active Directory and Group Policy
+                    </li>
+
+                    <li class="border-t border-portfolio-line pt-2">
+                        DHCP and DNS
+                    </li>
+
+                    <li class="border-t border-portfolio-line pt-2">
+                        iMac and Windows PC set-up
+                    </li>
+
+                    <li class="border-t border-portfolio-line pt-2">
+                        Remedy ticketing
+                    </li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="min-w-0 border border-portfolio-line bg-portfolio-panel">
+            <div
+                class="flex items-center gap-1.5 border-b border-portfolio-line px-4 py-2.5"
+                aria-hidden="true"
+            >
+                <span class="size-2.5 rounded-full bg-portfolio-dot"></span>
+                <span class="size-2.5 rounded-full bg-portfolio-dot"></span>
+                <span class="size-2.5 rounded-full bg-portfolio-dot"></span>
+            </div>
+
+            <div class="p-6">
+                <h2 class="mb-4 font-mono text-sm font-medium text-portfolio-amber">
+                    business.ops
+                </h2>
+
+                <ul class="flex flex-col gap-2 text-portfolio-soft">
+                    <li class="border-t border-portfolio-line pt-2">
+                        Sage One accounts and payroll
+                    </li>
+
+                    <li class="border-t border-portfolio-line pt-2">
+                        eBay and Amazon selling
+                    </li>
+
+                    <li class="border-t border-portfolio-line pt-2">
+                        Microsoft Excel, Access and Office
+                    </li>
+
+                    <li class="border-t border-portfolio-line pt-2">
+                        Customer service and escalations
+                    </li>
+
+                    <li class="border-t border-portfolio-line pt-2">
+                        Stock handling and order fulfilment
+                    </li>
+
+                    <li class="border-t border-portfolio-line pt-2">
+                        Budget estimation
+                    </li>
+                </ul>
+            </div>
+        </article>
+    </section>
+</x-layouts::main>

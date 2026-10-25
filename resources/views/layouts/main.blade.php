@@ -76,82 +76,71 @@
         @livewireStyles
         @fluxAppearance
 
-        <style>
-            :root {
-                color-scheme: dark;
-                --portfolio-bg: #0E1420;
-                --portfolio-panel: #141C2C;
-                --portfolio-line: #26324A;
-                --portfolio-ink: #E4E8F0;
-                --portfolio-soft: #C6CEDB;
-                --portfolio-muted: #9AA6B8;
-                --portfolio-amber: #F2B84B;
-            }
-
-            body {
-                background: var(--portfolio-bg);
-                color: var(--portfolio-ink);
-                font-family: 'Public Sans', system-ui, sans-serif;
-                font-size: 16px;
-                line-height: 1.6;
-                margin: 0;
-            }
-
-            .gutter {
-                padding-left: max(16px, env(safe-area-inset-left, 0px));
-                padding-right: max(16px, env(safe-area-inset-right, 0px));
-            }
-
-            .display {
-                font-family: 'Bricolage Grotesque', system-ui, sans-serif;
-                font-weight: 800;
-                letter-spacing: -0.02em;
-                text-wrap: balance;
-            }
-
-            a:focus-visible,
-            button:focus-visible {
-                outline: 2px solid var(--portfolio-amber);
-                outline-offset: 3px;
-            }
-
-            .copy-btn.done {
-                color: var(--portfolio-amber);
-                border-color: var(--portfolio-amber);
-            }
-
-            @media (prefers-reduced-motion: reduce) {
-                html {
-                    scroll-behavior: auto;
-                }
-            }
-
-            html {
-                padding-top: env(safe-area-inset-top, 0px);
-                padding-bottom: env(safe-area-inset-bottom, 0px);
-            }
-        </style>
     </head>
 
     <body class="min-h-full">
         <div class="gutter">
             <div class="mx-auto max-w-[1120px]">
-                <header class="border-b border-[#26324A]">
+                <header class="border-b border-portfolio-line">
                     <div class="flex flex-wrap items-center justify-between gap-x-8 gap-y-3 py-5">
                         <a
                             href="{{ route('home') }}"
-                            class="font-mono text-sm text-[#9AA6B8] no-underline hover:text-[#E4E8F0]"
+                            class="font-mono text-sm text-portfolio-muted no-underline hover:text-portfolio-ink"
                         >
                             andrewbeechey.me.uk
                         </a>
 
-                        <nav class="flex flex-wrap gap-x-6 gap-y-1 font-mono text-sm" aria-label="Main">
-                            <a href="{{ route('home') }}" class="text-[#F2B84B] no-underline" aria-current="page">home</a>
-                            <a href="{{ route('projects') }}" class="text-[#9AA6B8] no-underline hover:text-[#E4E8F0]">projects</a>
-                            <a href="{{ route('experience') }}" class="text-[#9AA6B8] no-underline hover:text-[#E4E8F0]">experience</a>
-                            <a href="{{ route('skills') }}" class="text-[#9AA6B8] no-underline hover:text-[#E4E8F0]">skills</a>
-                            <a href="{{ route('education') }}" class="text-[#9AA6B8] no-underline hover:text-[#E4E8F0]">education</a>
-                            <a href="{{ route('contact') }}" class="text-[#9AA6B8] no-underline hover:text-[#E4E8F0]">contact</a>
+                        <nav
+                            class="flex flex-wrap gap-x-6 gap-y-1 font-mono text-sm"
+                            aria-label="Main navigation"
+                        >
+                            <a
+                                href="{{ route('home') }}"
+                                class="{{ request()->routeIs('home') ? 'text-portfolio-amber' : 'text-portfolio-muted hover:text-portfolio-amber-hover' }} no-underline"
+                                @if (request()->routeIs('home')) aria-current="page" @endif
+                            >
+                                home
+                            </a>
+
+                            <a
+                                href="{{ route('projects') }}"
+                                class="{{ request()->routeIs('projects') ? 'text-portfolio-amber' : 'text-portfolio-muted hover:text-portfolio-amber-hover' }} no-underline"
+                                @if (request()->routeIs('projects')) aria-current="page" @endif
+                            >
+                                projects
+                            </a>
+
+                            <a
+                                href="{{ route('experience') }}"
+                                class="{{ request()->routeIs('experience') ? 'text-portfolio-amber' : 'text-portfolio-muted hover:text-portfolio-amber-hover' }} no-underline"
+                                @if (request()->routeIs('experience')) aria-current="page" @endif
+                            >
+                                experience
+                            </a>
+
+                            <a
+                                href="{{ route('skills') }}"
+                                class="{{ request()->routeIs('skills') ? 'text-portfolio-amber' : 'text-portfolio-muted hover:text-portfolio-amber-hover' }} no-underline"
+                                @if (request()->routeIs('skills')) aria-current="page" @endif
+                            >
+                                skills
+                            </a>
+
+                            <a
+                                href="{{ route('education') }}"
+                                class="{{ request()->routeIs('education') ? 'text-portfolio-amber' : 'text-portfolio-muted hover:text-portfolio-amber-hover' }} no-underline"
+                                @if (request()->routeIs('education')) aria-current="page" @endif
+                            >
+                                education
+                            </a>
+
+                            <a
+                                href="{{ route('contact') }}"
+                                class="{{ request()->routeIs('contact') ? 'text-portfolio-amber' : 'text-portfolio-muted hover:text-portfolio-amber-hover' }} no-underline"
+                                @if (request()->routeIs('contact')) aria-current="page" @endif
+                            >
+                                contact
+                            </a>
                         </nav>
                     </div>
                 </header>
@@ -160,21 +149,27 @@
                     {{ $slot }}
                 </main>
 
-                <footer class="mt-4 border-t border-[#26324A]">
-                    <div class="flex flex-wrap items-center justify-between gap-4 py-8 font-mono text-sm text-[#9AA6B8]">
-                        <span>© Andrew Beechey · London, UK</span>
+                <footer class="mt-4 border-t border-portfolio-line">
+                    <div class="flex flex-wrap items-center justify-between gap-4 py-8 font-mono text-sm text-portfolio-muted">
+                        <span>
+                            © {{ date('Y') }} Andrew Beechey · London, UK
+                        </span>
 
                         <span class="flex gap-6">
                             <a
-                                class="text-[#F2B84B] no-underline hover:text-[#E4E8F0]"
+                                class="text-portfolio-amber no-underline hover:text-portfolio-ink"
                                 href="https://github.com/Vilkrin"
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
                                 github
                             </a>
 
                             <a
-                                class="text-[#F2B84B] no-underline hover:text-[#E4E8F0]"
+                                class="text-portfolio-amber no-underline hover:text-portfolio-ink"
                                 href="https://uk.linkedin.com/in/abeechey"
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
                                 linkedin
                             </a>
@@ -236,7 +231,5 @@
 
         @livewireScripts
         @fluxScripts
-        
     </body>
-
 </html>

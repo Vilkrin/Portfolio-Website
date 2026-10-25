@@ -196,12 +196,13 @@
             </article>
 
             <article class="flex min-w-0 flex-col gap-3 border border-portfolio-line bg-portfolio-panel p-6">
-                <div class="flex flex-wrap items-start justify-between gap-2">
+
+                <div class="flex items-center justify-between gap-2">
                     <p class="min-w-0 font-mono text-xs text-portfolio-muted">
                         Gaming handle profile site
                     </p>
 
-                    <span class="shrink-0 border border-portfolio-amber px-2.5 py-1 font-mono text-xs text-portfolio-amber">
+                    <span class="shrink-0 whitespace-nowrap border border-portfolio-amber px-2.5 py-1 font-mono text-xs text-portfolio-amber">
                         In development
                     </span>
                 </div>
