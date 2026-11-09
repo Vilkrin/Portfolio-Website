@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full">
+<html
+    lang="{{ str_replace('_', '-', app()->getLocale()) }}"
+    class="h-full {{ request()->cookie('portfolio_external_fonts') === '1' ? '' : 'system-fonts' }}"
+>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -66,9 +69,26 @@
         @endif --}}
 
         <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@400;500&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+        @if(request()->cookie('portfolio_external_fonts') === '1')
+            <link
+                id="google-fonts-preconnect"
+                rel="preconnect"
+                href="https://fonts.googleapis.com"
+            >
+
+            <link
+                id="google-fonts-static-preconnect"
+                rel="preconnect"
+                href="https://fonts.gstatic.com"
+                crossorigin
+            >
+
+            <link
+                id="google-fonts-stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@400;500&family=Public+Sans:wght@400;500;600&display=swap"
+                rel="stylesheet"
+            >
+        @endif
 
         <!-- Styles and Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -150,29 +170,27 @@
                 </main>
 
                 <footer class="mt-4 border-t border-portfolio-line">
-                    <div class="flex flex-wrap items-center justify-between gap-4 py-8 font-mono text-sm text-portfolio-muted">
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-4 py-8 font-mono text-sm text-portfolio-muted">
                         <span>
-                            © {{ date('Y') }} Andrew Beechey · London, UK
+                            © 2026{{ date('Y') > 2026 ? ' - ' . date('Y') : '' }} Andrew Beechey. All Rights Reserved.
                         </span>
 
                         <span class="flex gap-6">
                             <a
+                                href="{{ route('privacy-policy') }}"
                                 class="text-portfolio-amber no-underline hover:text-portfolio-ink"
-                                href="https://github.com/Vilkrin"
-                                target="_blank"
-                                rel="noopener noreferrer"
                             >
-                                github
+                                privacy policy
                             </a>
 
-                            <a
-                                class="text-portfolio-amber no-underline hover:text-portfolio-ink"
-                                href="https://uk.linkedin.com/in/abeechey"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                linkedin
-                            </a>
+                        <button
+                            type="button"
+                            x-data
+                            x-on:click="window.dispatchEvent(new CustomEvent('open-cookie-preferences-window'))"
+                            class="cursor-pointer text-portfolio-amber hover:text-portfolio-ink"
+                        >
+                            cookie settings
+                        </button>
                         </span>
                     </div>
                 </footer>
@@ -228,6 +246,60 @@
                 });
             });
         </script>
+
+        <script>
+            window.addEventListener('external-fonts-updated', (event) => {
+                const enabled = event.detail.enabled;
+
+                // Switch between Google Fonts and system fonts.
+                document.documentElement.classList.toggle('system-fonts', !enabled);
+
+                const stylesheetId = 'google-fonts-stylesheet';
+
+                const stylesheet = document.getElementById(stylesheetId);
+                const preconnectGoogle = document.getElementById('google-fonts-preconnect');
+                const preconnectStatic = document.getElementById('google-fonts-static-preconnect');
+
+                if (enabled) {
+                    if (!preconnectGoogle) {
+                        const link = document.createElement('link');
+
+                        link.id = 'google-fonts-preconnect';
+                        link.rel = 'preconnect';
+                        link.href = 'https://fonts.googleapis.com';
+
+                        document.head.appendChild(link);
+                    }
+
+                    if (!preconnectStatic) {
+                        const link = document.createElement('link');
+
+                        link.id = 'google-fonts-static-preconnect';
+                        link.rel = 'preconnect';
+                        link.href = 'https://fonts.gstatic.com';
+                        link.crossOrigin = 'anonymous';
+
+                        document.head.appendChild(link);
+                    }
+
+                    if (!stylesheet) {
+                        const link = document.createElement('link');
+
+                        link.id = stylesheetId;
+                        link.rel = 'stylesheet';
+                        link.href = 'https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@400;500&family=Public+Sans:wght@400;500;600&display=swap';
+
+                        document.head.appendChild(link);
+                    }
+                } else {
+                    stylesheet?.remove();
+                    preconnectGoogle?.remove();
+                    preconnectStatic?.remove();
+                }
+            });
+        </script>
+
+        <livewire:cookie-consent />
 
         @livewireScripts
         @fluxScripts

@@ -14,6 +14,7 @@ Route::view('experience', 'experience')->name('experience');
 
 Route::view('skills', 'skills')->name('skills');
 
+Route::view('privacy-policy', 'privacy-policy')->name('privacy-policy');
 
 // Route::middleware(['auth', 'verified'])->group(function () {
 //     Route::view('dashboard', 'dashboard')->name('dashboard');
