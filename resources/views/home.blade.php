@@ -104,6 +104,7 @@
             </section>
         </div>
 
+
         <div class="min-w-0 flex-[1_1_420px]">
             <section class="h-full min-w-0 border border-portfolio-line bg-portfolio-panel">
                 <div class="flex items-center gap-1.5 border-b border-portfolio-line px-4 py-2.5" aria-hidden="true">
@@ -114,22 +115,57 @@
 
                 <div class="p-6">
                     <h2 class="mb-4 font-mono text-sm font-medium text-portfolio-amber">
-                        it-support.log
+                        technical-focus.json
                     </h2>
 
-                    <p class="mb-3 text-portfolio-soft">
-                        Set up four IT suites for Waltham Forest Adult Learning Service. Configured Proxmox servers running Windows Server with Active Directory, group policies, DHCP and DNS.
-                    </p>
+                    <div class="space-y-3">
+                        <div>
+                            <h3 class="mb-1 font-mono text-sm text-portfolio-ink">
+                                Backend Development
+                            </h3>
+                            <p class="text-portfolio-soft">
+                                Laravel, PHP and application development.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="mb-1 font-mono text-sm text-portfolio-ink">
+                                Frontend Development
+                            </h3>
+                            <p class="text-portfolio-soft">
+                                HTML, CSS and Tailwind CSS.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="mb-1 font-mono text-sm text-portfolio-ink">
+                                
+                            </h3>
+                            <p class="text-portfolio-soft">
+                                
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="mb-1 font-mono text-sm text-portfolio-ink">
+                               
+                            </h3>
+                            <p class="text-portfolio-soft">
+                                
+                            </p>
+                        </div>
+                    </div>
 
                     <a
-                        href="{{ route('experience') }}"
-                        class="font-mono text-sm text-portfolio-amber no-underline hover:text-portfolio-ink"
+                        href="{{ route('skills') }}"
+                        class="mt-4 inline-block font-mono text-sm text-portfolio-amber no-underline hover:text-portfolio-ink"
                     >
-                        view experience →
+                        view skills →
                     </a>
                 </div>
             </section>
         </div>
+
     </section>
 
     <section>
